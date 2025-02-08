@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: datafeed_shared_schema
+    database: "{{('DI_SALES')}}"
+    schema: CUSTOMER
+
+    tables:
+      - name: STG_CUSTOMERDATA
+      - name: STG_PAYMENTS
+      - name: STG_ORDER
