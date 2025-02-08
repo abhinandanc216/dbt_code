@@ -1,7 +1,7 @@
-{{config(materialized = 'table')}}
+{{config(materialized = 'view')}}
 
 select 
 id,
-firdt_name,
+first_name,
 last_name
-from {{source('datafeed_shared_schema','stg_customerdata')}};
+from {{source('datafeed_shared_schema','STG_CUSTOMERDATA')}}
