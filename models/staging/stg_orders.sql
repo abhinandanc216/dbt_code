@@ -6,6 +6,8 @@
 
 select
 o.orderid,
+c.customerid,
+p.productid,
 o.orderdate,
 o.shipdate,
 o.shipmode,
