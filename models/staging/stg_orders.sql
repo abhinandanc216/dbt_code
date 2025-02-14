@@ -21,7 +21,8 @@ c.country,
 p.category,
 p.productname,
 p.subcategory,
-{{ markup('ordersellingprice', 'ordercostprice') }} as markup,
+case when o.ordercostprice <> 0 then {{ markup('ordersellingprice', 'ordercostprice') }} 
+else 0 end as markup,
 d.delivery_team
 from {{ ref('raw_orders') }} as o
 LEFT JOIN {{ ref('raw_customer') }} as c
