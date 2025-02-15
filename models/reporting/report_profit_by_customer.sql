@@ -4,7 +4,4 @@ select
     country,
     sum(orderprofit) as profit
 from {{ ref('stg_orders') }}
-group by
-    customerid,
-    segment,
-    country
+{{group_by(3)}}     --used group_by macro

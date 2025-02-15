@@ -44,3 +44,5 @@ models:
       +materialized: table
     reporting:
       +materialized: view
+  snapshots:
+    +target_schema: SNAPSHOT
