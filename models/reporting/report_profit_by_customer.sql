@@ -1,3 +1,12 @@
+{{
+    config(
+        materialized='table',
+        schema = 'DBT_DNAIDO',
+        database ='ANALYTICS',
+        alias = 'PROFIT_BY_CUSTOMER'
+    )
+}}
+
 select
     customerid,
     segment,
